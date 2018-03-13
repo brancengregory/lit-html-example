@@ -1,0 +1,11 @@
+main {
+	width: fit-content;
+	border: 5px solid black;
+	transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg)
+		translateX(100px);
+}
+
+section {
+	
+}
+
