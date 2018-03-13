@@ -2,19 +2,17 @@ import { html, render } from './node_modules/lit-html/lit-html.js';
 import { repeat } from './node_modules/lit-html/lib/repeat.js';
 
 //const sections = Object.keys(resume);
-const sections = [{name:"Education", content:"This is a section about education."},
-					{name:"Work", content:"This is a section about work."}, 
-					{name:"Skills", content:"This is a section about skills."}];
+const sections = [{name:"Education"}, {name:"Work"}, {name:"Skills"}];
 
 const main = (sections) => {
 	return html`
 		<main>
 		${repeat(
 			sections,
+			section => section,
 			section => html`
 				<section>
 					<h2>${section.name}</h2>
-					<p>${section.content}</p>
 				</section>
 			`
 		)}
